@@ -1,0 +1,157 @@
+/* Navbar */
+
+.search {
+    color: #7d8035;
+}
+
+
+.Occasion {
+    left: 63rem;
+}
+
+.Global {
+    left: 70rem;
+}
+
+.vertical-slide {
+    width: 260px;
+    padding-left: 180px;
+    position: relative;
+    margin-top: 48px;
+}
+
+.slide-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*side-crousel*/
+
+.vertical-slide .splide__arrows--ttb .splide__arrow--next {
+    background-color: #fafafa !important; /* Background color */
+    width: 40px; /* Width of the arrow */
+    height: 40px; /* Height of the arrow */
+    opacity: 1; /* Full opacity */
+    bottom: -2em;
+    position: absolute; /* Absolute positioning */
+    border-radius: 50%; /* Make the arrow round */;
+}
+  
+
+.vertical-slide .splide__arrows--ttb .splide__arrow--prev {
+    background-color: #fafafa !important; /* Background color */
+    width: 40px; /* Width of the arrow */
+    height: 40px; /* Height of the arrow */
+    opacity: 1; /* Full opacity */
+    top: -3em; /* Distance from the top */
+    position: absolute; /* Absolute positioning */
+}
+
+.vertical-slide  .splide__arrow--prev svg {
+    fill: gray;
+}
+
+.vertical-slide  .splide__arrow--next svg {
+    fill: gray;
+}
+  
+  
+.rosess {
+    width: 80px;
+} 
+
+.Customer .splide__arrow:disabled{
+    display: none;
+}
+
+.recent .splide__arrow:disabled{
+    display: none;
+}
+
+.hero .splide__arrow:disabled {
+    display: none;
+}
+
+ .splide__arrow:disabled {
+    display: none;
+}
+
+.read-more-container {
+    position: relative;
+    margin-bottom: 2rem; /* Adjust based on your design */
+}
+
+.read-more-content {
+    transition: max-height 0.5s ease-out, margin-bottom 0.5s ease-out;
+    overflow: hidden;
+    max-height: 0;
+    margin-bottom: 0; /* This ensures the button's shift */
+}
+
+.read-more-content.expanded {
+    margin-bottom: 1rem; /* Space for the button to move down */
+}
+
+.read-more-button {
+    transition: margin 0.5s ease-out;
+}
+
+/* styles.css */
+.sticky {
+    position: sticky;
+    top: 0px;
+    z-index: 1; /* Ensure it stays above other content */
+    background: white; /* Optional: to avoid content overlap */
+    transition: top 0.3s ease; /* Smooth transition */
+}
+
+.relative {
+    position: relative;
+}
+
+.transition {
+    transition: all 0.3s ease;
+}
+
+.mainpic-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.mainpic-image {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+@media (min-width: 1024px) and (max-width:1439px) {
+    .vertical-slide {
+        padding-left: 10px;
+        width: 75px;
+    }
+
+    .rosess {
+        width: 65px;
+    }
+}
+
+@media (min-width: 768px) and (max-width:1023px) {
+    .vertical-slide {
+        padding-left: 10px;
+        width: 75px;
+    }
+
+    .rosess {
+        width: 65px;
+    }
+}
