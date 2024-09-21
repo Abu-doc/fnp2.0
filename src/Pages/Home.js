@@ -54,6 +54,5 @@ const Home = () => {
     )
 }
 
-//second change
 
 export default Home;
