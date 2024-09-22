@@ -14,6 +14,8 @@ import Recentlly from '../components/Recently2';
 import ReadMore from '../components/Read';
 import Worldwide from '../components/Worldwide';
 import HelpPanel from '../components/Help';
+import Bottom from '../components/Bottom';
+import Footer from '../components/Finish';
 
 const Generic = () => {
   return (
@@ -59,6 +61,8 @@ const Generic = () => {
       <Worldwide />
       <HelpPanel />
       <Outlet />
+      <Bottom />
+      <Footer />
     </div>
   );
 };

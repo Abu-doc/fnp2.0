@@ -32,7 +32,7 @@ const Sidebar = ({ onClose }) => {
                 )}
             </div>
             <div className="p-4 border-t">
-                <button className="w-full bg-green-600 text-white py-2 rounded">
+                <button className="w-full bg-green-500 text-white py-2 rounded">
                     Checkout
                 </button>
             </div>

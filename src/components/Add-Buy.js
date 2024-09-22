@@ -1,5 +1,4 @@
-// Buy.js
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux'; // Import useDispatch
 import { addToCart } from './cartSlice'; // Import addToCart action
 import { IoCartSharp } from 'react-icons/io5';
@@ -7,10 +6,19 @@ import { FaCartArrowDown } from 'react-icons/fa';
 
 const Buy = () => {
     const dispatch = useDispatch(); // Initialize dispatch
+    const [notification, setNotification] = useState(false); // Notification state
 
     const handleAddToCart = () => {
         const item = { name: 'Example Item', quantity: 1 }; // Replace with actual item data
         dispatch(addToCart(item));
+        triggerNotification(); // Show notification on add to cart
+    };
+
+    const triggerNotification = () => {
+        setNotification(true); // Show notification
+        setTimeout(() => {
+            setNotification(false); // Hide notification after 3 seconds
+        }, 3000);
     };
 
     return (
@@ -34,6 +42,13 @@ const Buy = () => {
                     <h4 className="text-white font-semibold ml-2">Buy Now</h4>
                 </div>
             </div>
+
+            {/* Notification pop-up */}
+            {notification && (
+                <div className="fixed top-10 right-10 bg-black text-white p-3 rounded-lg shadow-lg animate-fade-in">
+                    <h4 className="text-sm font-semibold">Item added to cart!</h4>
+                </div>
+            )}
         </div>
     );
 };

@@ -7,13 +7,17 @@ import { RiAdminLine } from "react-icons/ri";
 import { CiSquareMore } from "react-icons/ci";
 import CartIcon from './CartIcon'; // Import CartIcon
 import './styles.css';
+import { Link } from 'react-router-dom';
+
 
 const Navbar = () => {
 
     return (
         <nav className="navbar flex items-center justify-around mt-2 border-b-2">
             <div className="navbar-left flex justify-between">
-                <img src={fnp1} alt="fnp" className="w-40 mr-9 lg-xl:w-36 lg-xl:mr-0 md-lg:w-20 md-lg:mr-0" />
+                <Link to='/'>
+                <img src={fnp1} alt="fnp" className="w-40 mr-9 lg-xl:w-36 lg-xl:mr-0 md-lg:w-20 md-lg:mr-0 cursor-pointer" />
+                </Link>
                 <div className="direction flex justify-center items-center">
                     <div className="direction-1 text-2xl text-gray-700 lg-xl:text-xl md-lg:text-lg ">
                         <MdNotListedLocation />

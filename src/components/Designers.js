@@ -78,7 +78,7 @@ const DesignersPick = () => {
           <SplideSlide key={index}>
             <div className="flex flex-col items-center">
               <div className="bg-violet-500 rounded-xl overflow-hidden w-[270px] h-[408px] border">
-                <img src={slide.src} alt={slide.alt} className="w-full h-full object-cover cursor-pointernp" />
+                <img src={slide.src} alt={slide.alt} className="w-full h-full object-cover cursor-pointer" />
               </div>
               <div className="mt-3 text-center">
                 <h3 className="text-gray-800 mt-1 text-lg font-serif font-semibold">{slide.title}</h3>

@@ -11,6 +11,7 @@ import dummy21 from './images/dummy21.jpg'
 import dummy22 from './images/dummy22.jpg'
 import dummy23 from './images/dummy23.jpg'
 import dummy24 from './images/dummy24.jpg'
+import { Link } from 'react-router-dom';
 
 
 const Like = () => {
@@ -35,6 +36,7 @@ const Like = () => {
                 }}
             >
                 <SplideSlide>
+                    <Link to='/final'>
                     <div className="border border-gray-200 w-80 rounded-lg cursor-pointer">
                     <div className="relative">
                         <img src={dummy17} alt="dummy" className="w-80 h-auto" />
@@ -63,8 +65,10 @@ const Like = () => {
         <span className="text-blue-600 mt-1">Earliest Delivery: Today</span> 
                     </div>
                     </div>
+                    </Link>
                 </SplideSlide>
                 <SplideSlide>
+                    <Link to='/final'>
                     <div className="border border-gray-200 w-80 rounded-lg cursor-pointer">
                     <div className="relative">
                         <img src={dummy18} alt="dummy" className="w-80 h-auto" />
@@ -90,8 +94,10 @@ const Like = () => {
         <span className="text-blue-600 mt-1">Earliest Delivery: Today</span> 
                     </div>
                     </div>
+                    </Link>
                 </SplideSlide>
                 <SplideSlide>
+                <Link to='/final'>
                     <div className="border border-gray-200 w-80 rounded-lg cursor-pointer">
                     <div className="relative">
                         <img src={dummy19} alt="dummy" className="w-80 h-auto" />
@@ -117,8 +123,12 @@ const Like = () => {
         <span className="text-blue-600 mt-1">Earliest Delivery: Today</span> 
                     </div>
                     </div>
+                    </Link>
+
                 </SplideSlide>
                 <SplideSlide>
+                <Link to='/final'>
+
                     <div className="border border-gray-200 w-80 rounded-lg cursor-pointer">
                     <div className="relative">
                         <img src={dummy20} alt="dummy" className="w-80 h-auto" />
@@ -144,8 +154,12 @@ const Like = () => {
         <span className="text-blue-600 mt-1">Earliest Delivery: Today</span> 
                     </div>
                     </div>
+                    </Link>
+
                 </SplideSlide>
                 <SplideSlide>
+                <Link to='/final'>
+
                     <div className="border border-gray-200 w-80 rounded-lg cursor-pointer">
                     <div className="relative">
                         <img src={dummy21} alt="dummy" className="w-80 h-auto" />
@@ -171,8 +185,12 @@ const Like = () => {
         <span className="text-blue-600 mt-1">Earliest Delivery: Today</span> 
                     </div>
                     </div>
+                    </Link>
+
                 </SplideSlide>
                 <SplideSlide>
+                <Link to='/final'>
+
                     <div className="border border-gray-200 w-80 rounded-lg cursor-pointer">
                     <div className="relative">
                         <img src={dummy22} alt="dummy" className="w-80 h-auto" />
@@ -198,8 +216,11 @@ const Like = () => {
         <span className="text-blue-600 mt-1">Earliest Delivery: Today</span> 
                     </div>
                     </div>
+                    </Link>
                 </SplideSlide>
                 <SplideSlide>
+                <Link to='/final'>
+
                     <div className="border border-gray-200 w-80 rounded-lg cursor-pointer">
                     <div className="relative">
                         <img src={dummy23} alt="dummy" className="w-80 h-auto" />
@@ -225,8 +246,11 @@ const Like = () => {
         <span className="text-blue-600 mt-1">Earliest Delivery: Today</span> 
                     </div>
                     </div>
+                    </Link>
                 </SplideSlide>
                 <SplideSlide>
+                <Link to='/final'>
+
                     <div className="border border-gray-200 w-80 rounded-lg cursor-pointer">
                     <div className="relative">
                         <img src={dummy24} alt="dummy" className="w-80 h-auto" />
@@ -252,6 +276,7 @@ const Like = () => {
         <span className="text-blue-600 mt-1">Earliest Delivery: Today</span> 
                     </div>
                     </div>
+                    </Link>
                 </SplideSlide>
             </Splide>
         </div>

@@ -11,6 +11,7 @@ import dummy5 from './images/dummy5.jpg'
 import dummy6 from './images/dummy6.jpg'
 import dummy7 from './images/dummy7.jpg'
 import dummy8 from './images/dummy8.jpg'
+import { Link } from 'react-router-dom';
 
 
 const Recent = () => {
@@ -35,6 +36,7 @@ const Recent = () => {
                 }}
             >
                 <SplideSlide>
+                <Link to="/final">
                     <div className="border border-gray-200 w-80 rounded-lg cursor-pointer">
                     <div className="relative">
                         <img src={dummy} alt="dummy" className="w-80 h-auto" />
@@ -63,8 +65,10 @@ const Recent = () => {
         <span className="text-blue-600 mt-1">Earliest Delivery: Today</span> 
                     </div>
                     </div>
+                    </Link>
                 </SplideSlide>
                 <SplideSlide>
+                    <Link to="/final">
                     <div className="border border-gray-200 w-80 rounded-lg cursor-pointer">
                     <div className="relative">
                         <img src={dummy2} alt="dummy" className="w806 h-auto" />
@@ -90,8 +94,10 @@ const Recent = () => {
         <span className="text-blue-600 mt-1">Earliest Delivery: Today</span> 
                     </div>
                     </div>
+                    </Link>
                 </SplideSlide>
                 <SplideSlide>
+                    <Link to="/final">
                     <div className="border border-gray-200 w-80 rounded-lg cursor-pointer">
                     <div className="relative">
                         <img src={dummy3} alt="dummy" className="w806 h-auto" />
@@ -117,8 +123,10 @@ const Recent = () => {
         <span className="text-blue-600 mt-1">Earliest Delivery: Today</span> 
                     </div>
                     </div>
+                    </Link>
                 </SplideSlide>
                 <SplideSlide>
+                    <Link to="/final">
                     <div className="border border-gray-200 w-80 rounded-lg cursor-pointer">
                     <div className="relative">
                         <img src={dummy4} alt="dummy" className="w806 h-auto" />
@@ -144,8 +152,10 @@ const Recent = () => {
         <span className="text-blue-600 mt-1">Earliest Delivery: Today</span> 
                     </div>
                     </div>
+                    </Link>
                 </SplideSlide>
                 <SplideSlide>
+                    <Link to="/final">
                     <div className="border border-gray-200 w-80 rounded-lg cursor-pointer">
                     <div className="relative">
                         <img src={dummy5} alt="dummy" className="w806 h-auto" />
@@ -171,8 +181,10 @@ const Recent = () => {
         <span className="text-blue-600 mt-1">Earliest Delivery: Today</span> 
                     </div>
                     </div>
+                    </Link>
                 </SplideSlide>
                 <SplideSlide>
+                    <Link to="/final">
                     <div className="border border-gray-200 w-80 rounded-lg cursor-pointer">
                     <div className="relative">
                         <img src={dummy6} alt="dummy" className="w806 h-auto" />
@@ -198,8 +210,10 @@ const Recent = () => {
         <span className="text-blue-600 mt-1">Earliest Delivery: Today</span> 
                     </div>
                     </div>
+                    </Link>
                 </SplideSlide>
                 <SplideSlide>
+                    <Link to="/final">
                     <div className="border border-gray-200 w-80 rounded-lg cursor-pointer">
                     <div className="relative">
                         <img src={dummy7} alt="dummy" className="w806 h-auto" />
@@ -225,8 +239,10 @@ const Recent = () => {
         <span className="text-blue-600 mt-1">Earliest Delivery: Today</span> 
                     </div>
                     </div>
+                    </Link>
                 </SplideSlide>
                 <SplideSlide>
+                    <Link to="/final">
                     <div className="border border-gray-200 w-80 rounded-lg cursor-pointer">
                     <div className="relative">
                         <img src={dummy8} alt="dummy" className="w806 h-auto" />
@@ -252,6 +268,7 @@ const Recent = () => {
         <span className="text-blue-600 mt-1">Earliest Delivery: Today</span> 
                     </div>
                     </div>
+                    </Link>
                 </SplideSlide>
             </Splide>
         </div>

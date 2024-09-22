@@ -12,6 +12,8 @@ import ReadMore from '../components/Read';
 import Worldwide from '../components/Worldwide';
 import HelpPanel from '../components/Help';
 import CarouselWithMainPic from '../components/CarouselMainPic';
+import Bottom from '../components/Bottom';
+import Footer from '../components/Finish';
 
 function Final() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -41,6 +43,8 @@ function Final() {
       <ReadMore />
       <Worldwide />
       <HelpPanel />
+      <Bottom />
+      <Footer />
     </div>
   );
 }

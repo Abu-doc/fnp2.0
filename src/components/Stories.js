@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css'; // Import Splide CSS
 import blackpink from './images/blackpink.jpg'
@@ -19,6 +19,7 @@ import skz from './images/skz.jpg'
 import babym from './images/babymonster.jpg'
 import nmixx from './images/nmixx.jpg'
 import everglow from './images/everglow.jpg'
+import './styles.css';
 
 
 
@@ -26,18 +27,27 @@ import everglow from './images/everglow.jpg'
 
 
 
-import './styles.css'; // Ensure to import your CSS file
+
+
+
+
 
 const Stories = () => {
+
+   
+            
     return (
-        <div className="recent px-16 mt-5">
+        <div className="recent px-16 mt-7">
             <Splide
                 options={{
+                    type: 'loop', // Enables infinite scrolling
                     perPage: 10,
-                    perMove: 1,
+                    
                     gap: '1rem',
                     pagination: false,
-                    arrows: true,
+                    arrows: false, // Hide arrows to make it look like a seamless loop
+                    drag: false, // Disable drag to avoid interruption
+                    speed: 0, // No transition speed (handled by CSS)
                     breakpoints: {
                         1200: {
                             perPage: 2,
@@ -47,6 +57,8 @@ const Stories = () => {
                         },
                     },
                 }}
+                className="flow-carousel"
+                
             >
                 <SplideSlide>
                     <div className=" w-24 rounded-full   cursor-pointer">
@@ -193,6 +205,7 @@ const Stories = () => {
                     </div>
                 </SplideSlide>
             </Splide>
+           
         </div>
     );
 }

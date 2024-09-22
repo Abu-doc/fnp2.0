@@ -22,6 +22,8 @@ import Customer from "../components/Customers.js";
 import ReadMore from "../components/Read.js";
 import Worldwide from "../components/Worldwide.js";
 import HelpPanel from "../components/Help.js";
+import Bottom from "../components/Bottom.js";
+import Footer from "../components/Finish.js";
 
 const Home = () => {
     return (
@@ -49,6 +51,8 @@ const Home = () => {
             <ReadMore />
             <Worldwide />
             <HelpPanel />
+            <Bottom />
+            <Footer />
             
         </div>
     )
