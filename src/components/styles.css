@@ -154,6 +154,10 @@
     .rosess {
         width: 65px;
     }
+
+    .sticky {
+    position: static !important;
+  }
 }
 
 /* Add this to your styles.css */

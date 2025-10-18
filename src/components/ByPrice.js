@@ -4,7 +4,7 @@ import border from './images/border3.jpg'
 
 const ShopByPrice = () => {
     return (
-        <div className="relative mx-auto mt-20  bg-cover h-160 bg-center" style={{ backgroundImage:`url(${border})`  }}>
+        <div className="hidden md:flex relative mx-auto mt-20  bg-cover h-160 bg-center" style={{ backgroundImage:`url(${border})`  }}>
             
             <div className="relative z-10 flex flex-col items-center py-6 px-4  rounded-lg top-52 mx-[-35px] w-[calc(100vw)] ">
                 <h1 className="text-5xl font-serif italic  font-bold text-[#474545] mb-8">Shop by Price</h1>

@@ -5,7 +5,7 @@ import border from './images/border.jpg'; // Import the image
 const Luxe = () => {
   return (
     <div
-      className="relative flex flex-col items-center justify-center bg-palegoldenrod h-160 mt-6 bg-cover bg-no-repeat bg-center"
+      className="hidden md:flex relative flex flex-col items-center justify-center bg-palegoldenrod h-160 mt-6 bg-cover bg-no-repeat bg-center"
       style={{ backgroundImage: `url(${border})` }} // Use the imported image
     >
       <div className="text-center mt-20 mb-8 px-4">

@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+
+// Core Components
 import Navbar from "../components/Navbar";
 import Dropdown from "../components/Dropdown";
 import Stories from "../components/Stories";
@@ -25,38 +27,54 @@ import HelpPanel from "../components/Help.js";
 import Bottom from "../components/Bottom.js";
 import Footer from "../components/Finish.js";
 
-const Home = () => {
-    return (
-        <div>
-            <Navbar />
-            <Dropdown />
-            <Stories />
-            <Hero2 />
-            <RangeDisplay />
-            <ChooseSection />
-            <ChooseOccasion />
-            <PerfectSurprise />
-            <Best />
-            <FavouriteColor />
-            <Newest />
-            <Showstopper />
-            <Luxe />
-            <DesignersPick />
-            <Pair />
-            <ShopByPrice />
-            <BloomsIndia />
-            <Preserved />
-            <BloomsGlobal />
-            <Customer />
-            <ReadMore />
-            <Worldwide />
-            <HelpPanel />
-            <Bottom />
-            <Footer />
-            
-        </div>
-    )
-}
+// Sidebars
 
+import MoreSidebar from "../components/Sidebar2.js"; // New More Sidebar
+
+const Home = () => {
+  // State to control both sidebars
+  
+  const [isMoreOpen, setMoreOpen] = useState(false);
+
+  return (
+    <div className="relative">
+      {/* Navbar */}
+      <Navbar
+        
+        onMoreClick={() => setMoreOpen(true)} // ✅ This will trigger the More sidebar
+      />
+
+      {/* Sidebars */}
+      
+      <MoreSidebar isOpen={isMoreOpen} onClose={() => setMoreOpen(false)} />
+
+      {/* Main Page Sections */}
+      <Dropdown />
+      <Stories />
+      <Hero2 />
+      <RangeDisplay />
+      <ChooseSection />
+      <ChooseOccasion />
+      <PerfectSurprise />
+      <Best />
+      <FavouriteColor />
+      <Newest />
+      <Showstopper />
+      <Luxe />
+      <DesignersPick />
+      <Pair />
+      <ShopByPrice />
+      <BloomsIndia />
+      <Preserved />
+      <BloomsGlobal />
+      <Customer />
+      <ReadMore />
+      <Worldwide />
+      <HelpPanel />
+      <Bottom />
+      <Footer />
+    </div>
+  );
+};
 
 export default Home;

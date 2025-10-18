@@ -1,191 +1,61 @@
 import React from "react";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/react-splide/css'; // Import Splide CSS
-import './styles.css'
-import profile from './images/people.png'
+import '@splidejs/react-splide/css';
+import profile from './images/people.png';
 import { FaStar } from "react-icons/fa";
-import './styles.css'
 
 const Customer = () => {
+  const reviews = [
+    { name: "Amit Kapoor", time: "2 months ago", message: "Thank You so much for making my friend's day special!!!", occasion: "Birthday", city: "Delhi" },
+    { name: "Rina Sharma", time: "1 month ago", message: "Amazing service and beautiful bouquet!", occasion: "Anniversary", city: "Mumbai" },
+    { name: "Karan Singh", time: "3 weeks ago", message: "Highly recommend! Fast delivery.", occasion: "Wedding", city: "Bangalore" },
+    { name: "Neha Gupta", time: "1 month ago", message: "Lovely arrangement, prompt delivery!", occasion: "Birthday", city: "Pune" },
+    { name: "Rahul Verma", time: "2 weeks ago", message: "Exceeded expectations!", occasion: "Anniversary", city: "Chennai" },
+  ];
+
   return (
-    <div className=" Customer">
+    <div className="customer px-4 md:px-8 lg:px-16 py-10 hidden lg:block">
       <h1 className="font-semibold text-3xl text-left mb-6 mt-6">Hear It From Our Customers</h1>
-      <Splide
-        options={{
-          perPage    : 3 ,
-          perMove : 1,
-          gap        : '1rem',
-          pagination : false,
-          arrows     : true,
-          breakpoints: {
-            1200: {
-              perPage: 2,
+      
+      {/* Carousel is hidden below 768px */}
+      <div className="hidden lg:block">
+        <Splide
+          options={{
+            perPage: 3,
+            perMove: 1,
+            gap: '1rem',
+            pagination: false,
+            arrows: true,
+            breakpoints: {
+              1200: { perPage: 2 },
+              // 768 breakpoint removed because it’s now hidden completely
             },
-            768: {
-              perPage: 1,
-            },
-          },
-        }}
-      >
-        <SplideSlide>
-          <div className="flex flex-col w-96 p-5 border border-gray-300 rounded-lg ">
-            <div className=" flex items-center">
-                <div className="w-10">
-                    <img src={profile} alt="profile" />
-                </div>
-                <div className=" flex flex-col ml-1 ">
-                    <div className="flex items-center justify-start">'
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
+          }}
+        >
+          {reviews.map((review, idx) => (
+            <SplideSlide key={idx}>
+              <div className="flex flex-col w-full max-w-sm p-5 border border-gray-300 rounded-lg mx-auto">
+                <div className="flex items-center mb-3">
+                  <img src={profile} alt="profile" className="w-12 h-12 rounded-full" />
+                  <div className="flex flex-col ml-3">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => <FaStar key={i} />)}
                     </div>
-                    <span className="text-gray-800 font-medium">Amit Kapoor &#x2022; 2 months ago</span>
+                    <span className="text-gray-800 font-medium text-sm">{review.name} &#x2022; {review.time}</span>
+                  </div>
                 </div>
-            </div>
-            <div className="text-left font-medium mt-3">
-                <span>Thank You so much for making my friend's day sepcial!!!</span>
-            </div>
-            <div className="flex mt-2">
-                <span className="bg-gray-300 rounded-md p-1">Occasion: Birthday </span>
-                <span className="bg-gray-300 rounded-md ml-2 p-1">City: Delhi </span>
-            </div>
-          </div>
-        </SplideSlide>
-        <SplideSlide>
-          <div className="flex flex-col w-96 p-5 border border-gray-300 rounded-lg">
-            <div className=" flex items-center">
-                <div className="w-10">
-                    <img src={profile} alt="profile" />
+                <p className="text-gray-700 mb-3">{review.message}</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-gray-200 px-2 py-1 rounded-md text-sm">Occasion: {review.occasion}</span>
+                  <span className="bg-gray-200 px-2 py-1 rounded-md text-sm">City: {review.city}</span>
                 </div>
-                <div className=" flex flex-col ml-1 ">
-                    <div className="flex items-center justify-start">'
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    </div>
-                    <span className="text-gray-800 font-medium">Amit Kapoor &#x2022; 2 months ago</span>
-                </div>
-            </div>
-            <div className="text-left font-medium mt-3">
-                <span>Thank You so much for making my friend's day sepcial!!!</span>
-            </div>
-            <div className="flex mt-2">
-                <span className="bg-gray-300 rounded-md p-1">Occasion: Birthday </span>
-                <span className="bg-gray-300 rounded-md ml-2 p-1">City: Delhi </span>
-            </div>
-          </div>
-        </SplideSlide>
-        <SplideSlide>
-          <div className="flex flex-col w-96 p-5 border border-gray-300 rounded-lg absolute bottom-0">
-            <div className=" flex items-center">
-                <div className="w-10">
-                    <img src={profile} alt="profile" />
-                </div>
-                <div className=" flex flex-col ml-1 ">
-                    <div className="flex items-center justify-start">'
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    </div>
-                    <span className="text-gray-800 font-medium">Amit Kapoor &#x2022; 2 months ago</span>
-                </div>
-            </div>
-            <div className="text-left font-medium mt-3">
-                <span>Thank You so much for making my friend's day sepcial!!!</span>
-            </div>
-            <div className="flex mt-2">
-                <span className="bg-gray-300 rounded-md p-1">Occasion: Birthday </span>
-                <span className="bg-gray-300 rounded-md ml-2 p-1">City: Delhi </span>
-            </div>
-          </div>
-        </SplideSlide>
-        <SplideSlide>
-          <div className="flex flex-col w-96 p-5 border border-gray-300 rounded-lg absolute bottom-0">
-            <div className=" flex items-center">
-                <div className="w-10">
-                    <img src={profile} alt="profile" />
-                </div>
-                <div className=" flex flex-col ml-1 ">
-                    <div className="flex items-center justify-start">'
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    </div>
-                    <span className="text-gray-800 font-medium">Amit Kapoor &#x2022; 2 months ago</span>
-                </div>
-            </div>
-            <div className="text-left font-medium mt-3">
-                <span>Thank You so much for making my friend's day sepcial!!!</span>
-            </div>
-            <div className="flex mt-2">
-                <span className="bg-gray-300 rounded-md p-1">Occasion: Birthday </span>
-                <span className="bg-gray-300 rounded-md ml-2 p-1">City: Delhi </span>
-            </div>
-          </div>
-        </SplideSlide>
-        <SplideSlide>
-          <div className="flex flex-col w-96 p-5 border border-gray-300 rounded-lg absolute bottom-0">
-            <div className=" flex items-center">
-                <div className="w-10">
-                    <img src={profile} alt="profile" />
-                </div>
-                <div className=" flex flex-col ml-1 ">
-                    <div className="flex items-center justify-start">'
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    </div>
-                    <span className="text-gray-800 font-medium">Amit Kapoor &#x2022; 2 months ago</span>
-                </div>
-            </div>
-            <div className="text-left font-medium mt-3">
-                <span>Thank You so much for making my friend's day sepcial!!!</span>
-            </div>
-            <div className="flex mt-2">
-                <span className="bg-gray-300 rounded-md p-1">Occasion: Birthday </span>
-                <span className="bg-gray-300 rounded-md ml-2 p-1">City: Delhi </span>
-            </div>
-          </div>
-        </SplideSlide>
-        <SplideSlide>
-          <div className="flex flex-col w-96 p-5 border border-gray-300 rounded-lg absolute bottom-0">
-            <div className=" flex items-center">
-                <div className="w-10">
-                    <img src={profile} alt="profile" />
-                </div>
-                <div className=" flex flex-col ml-1 ">
-                    <div className="flex items-center justify-start">'
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    </div>
-                    <span className="text-gray-800 font-medium">Amit Kapoor &#x2022; 2 months ago</span>
-                </div>
-            </div>
-            <div className="text-left font-medium mt-3">
-                <span>Thank You so much for making my friend's day sepcial!!!</span>
-            </div>
-            <div className="flex mt-2">
-                <span className="bg-gray-300 rounded-md p-1">Occasion: Birthday </span>
-                <span className="bg-gray-300 rounded-md ml-2 p-1">City: Delhi </span>
-            </div>
-          </div>
-        </SplideSlide>
-      </Splide>
+              </div>
+            </SplideSlide>
+          ))}
+        </Splide>
+      </div>
     </div>
   );
-}
+};
 
 export default Customer;

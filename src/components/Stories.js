@@ -50,10 +50,10 @@ const Stories = () => {
                     speed: 0, // No transition speed (handled by CSS)
                     breakpoints: {
                         1200: {
-                            perPage: 2,
+                            perPage: 4,
                         },
                         768: {
-                            perPage: 1,
+                            perPage: 2,
                         },
                     },
                 }}

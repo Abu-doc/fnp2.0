@@ -1,5 +1,5 @@
 import React from 'react';
-import bouquet from './images/cake.jpg'; // Example import, use actual images for the rest
+import bouquet from './images/cake.jpg';
 import arrangement from './images/chocolate2.jpg';
 import standing from './images/teddy.jpg';
 import box from './images/guitarist.jpg';
@@ -19,18 +19,27 @@ const Pair = () => {
 
   return (
     <div className="showstopper px-6 py-0">
-      <h1 className="text-gray-600 mt-16 mb-12 text-3xl font-semibold font-serif text-center">Pair With Flowers</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+      <h1 className="text-gray-600 mt-16 mb-12 text-3xl font-semibold font-serif text-center">
+        Pair With Flowers
+      </h1>
+
+      {/* Responsive Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {items.map((item) => (
           <Link key={item.id} to={`/generic/${item.id}`}>
             <div className="relative cursor-pointer">
+              {/* Image */}
               <img
                 src={item.imgSrc}
                 alt={item.text}
                 className="w-full h-[250px] object-cover rounded-lg"
               />
-              <div className="absolute bottom-0 left-0 p-4 flex items-center bg-white bg-opacity-80 rounded-bl-lg rounded-tr-3xl w-[280px] h-[56px] z-10">
-                <h3 className="text-[#474545] font-semibold">{item.text}</h3>
+
+              {/* Overlay label */}
+              <div className="absolute bottom-0 left-0 p-4 bg-white bg-opacity-80 rounded-bl-lg rounded-tr-3xl w-full min-h-[56px] flex items-center">
+                <h3 className="text-[#474545] font-semibold truncate">
+                  {item.text}
+                </h3>
               </div>
             </div>
           </Link>

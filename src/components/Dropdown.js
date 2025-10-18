@@ -181,7 +181,8 @@ const Dropdown = () => {
   ];
 
   return (
-    <div className="relative flex items-center justify-evenly py-1 px-20 border-b-2 lg-xl:px-0 md-lg:px-0 md-lg:grid md-lg:grid-cols-5">
+     <div className="relative hidden md:flex items-center justify-evenly py-1 px-20 border-b-2 lg-xl:px-0 md-lg:px-0 md-lg:grid md-lg:grid-cols-5">
+
       {dropdowns.map((dropdown, index) => (
         <DropdownItem
           key={index}
@@ -194,3 +195,5 @@ const Dropdown = () => {
 };
 
 export default Dropdown;
+
+

@@ -1,24 +1,23 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux'; // Import useDispatch
-import { addToCart } from './cartSlice'; // Import addToCart action
+import { useDispatch } from 'react-redux';
+import { addToCart } from './cartSlice';
 import { IoCartSharp } from 'react-icons/io5';
 import { FaCartArrowDown } from 'react-icons/fa';
 
-const Buy = () => {
-    const dispatch = useDispatch(); // Initialize dispatch
-    const [notification, setNotification] = useState(false); // Notification state
+const Buy = ({ product }) => { // <-- receive product as prop
+    const dispatch = useDispatch();
+    const [notification, setNotification] = useState(false);
 
     const handleAddToCart = () => {
-        const item = { name: 'Example Item', quantity: 1 }; // Replace with actual item data
+        // Add the real product to cart
+        const item = { ...product, quantity: 1 };
         dispatch(addToCart(item));
-        triggerNotification(); // Show notification on add to cart
+        triggerNotification();
     };
 
     const triggerNotification = () => {
-        setNotification(true); // Show notification
-        setTimeout(() => {
-            setNotification(false); // Hide notification after 3 seconds
-        }, 3000);
+        setNotification(true);
+        setTimeout(() => setNotification(false), 3000);
     };
 
     return (
@@ -33,6 +32,7 @@ const Buy = () => {
                     </span>
                     <h4 className="text-custom-green font-semibold ml-2">Add To Cart</h4>
                 </div>
+
                 <div
                     className="flex items-center justify-center border bg-custom-green border-custom-green w-64 h-10 text-lg rounded-lg cursor-pointer lg-xl:w-52 md-lg:w-36"
                 >
@@ -43,7 +43,6 @@ const Buy = () => {
                 </div>
             </div>
 
-            {/* Notification pop-up */}
             {notification && (
                 <div className="fixed top-10 right-10 bg-black text-white p-3 rounded-lg shadow-lg animate-fade-in">
                     <h4 className="text-sm font-semibold">Item added to cart!</h4>

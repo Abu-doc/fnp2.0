@@ -6,7 +6,7 @@ import { RiCustomerService2Line } from "react-icons/ri";
 const Worldwide = () => {
     return (
         <div>
-            <div className="flex items-center justify-evenly h-28 border-t-2">
+            <div className="hidden md:flex flex items-center justify-evenly h-28 border-t-2">
                 <div className="flex items-center justify-evenly">
                     <span className="text-gray-900 font-bold text-4xl top-1 relative">
                     <TbWorldHeart />

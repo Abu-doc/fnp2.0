@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import dummy6 from './images/dummy6.jpg';
@@ -34,3 +36,7 @@ const Content = () => {
 };
 
 export default Content;
+
+
+
+

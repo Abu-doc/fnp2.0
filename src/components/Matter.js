@@ -10,7 +10,7 @@ import Buy from './Add-Buy';
 import Offers from './Offers';
 import About from './About';
 
-const Matter = ({ onComboSelect }) => {
+const Matter = ({ product, onComboSelect }) => {  // <-- Added product prop
   const initialSeconds = 10000;
 
   return (
@@ -21,7 +21,10 @@ const Matter = ({ onComboSelect }) => {
       <DateComponent />
       <MessageInput />
       <TimeComponent initialSeconds={initialSeconds} />
-      <Buy />
+      
+      {/* Pass the product to Buy */}
+      <Buy product={product} />
+
       <Offers />
       <About />
     </div>

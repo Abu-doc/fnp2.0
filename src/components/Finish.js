@@ -8,7 +8,7 @@ import paypal from './images/paypal.png';
 
 const Footer = () => {
   return (
-    <div className="last-footer bg-gray-800 text-white font-medium text-sm flex justify-between items-center px-9 py-2 max-w-[1600px] mx-auto relative">
+    <div className="hidden md:flex last-footer bg-gray-800 text-white font-medium text-sm flex justify-between items-center px-9 py-2 max-w-[1600px] mx-auto relative">
       <span>© 1994-2024 fnp.com. All rights reserved.</span>
       <div className="keep-in-touch flex items-center">
         <span id="keepintouch" className="mr-2">Keep in Touch</span>

@@ -5,7 +5,7 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const HelpPanel = () => {
     return (
-        <div className="flex justify-around items-start p-6 bg-gray-100">
+        <div className="hidden md:flex justify-around items-start p-6 bg-gray-100">
             {/* Help Panel Content */}
             <div className="flex gap-20 lg-xl:gap-3 md-lg:gap-0">
                 {/* POLICY INFO */}

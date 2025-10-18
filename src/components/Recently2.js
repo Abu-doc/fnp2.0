@@ -17,7 +17,7 @@ import { Link } from 'react-router-dom';
 
 const Recentlly = () => {
     return (
-        <div className="recent">
+        <div className="recent hidden lg:block">
             <h1 className="font-semibold text-3xl text-left mb-6 mt-4">Recently Viewed By You</h1>
             <Splide
                 options={{

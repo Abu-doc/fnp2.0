@@ -17,13 +17,36 @@ const colorClasses = {
 
 const FavouriteColor = () => {
   return (
-    <div className="flex flex-col items-center mt-14 px-8 py-6 bg-[#f7f2ec] h-[450px] w-[96vw] mx-auto">
-      <h1 className="text-center text-3xl font-bold text-gray-600 mb-12">Choose a Favourite Colour</h1>
-      <div className="grid grid-cols-3 gap-y-8 md:grid-cols-4 lg:grid-cols-6 gap-x-28">
-        {['red', 'purple', 'pink', 'peach', 'warm', 'pastel', 'orange', 'blue', 'white', 'yellow', 'cool', 'mix'].map((color, index) => (
-          <div key={index} className="flex flex-col items-center justify-center cursor-pointer">
-            <div className={`h-[110px] w-[110px] rounded-full ${colorClasses[color]} bg-cover`} />
-            <h5 className="mt-3 text-[#474545]">{capitalizeFirstLetter(color)}</h5>
+    <div className="flex flex-col items-center mt-14 px-4 py-8 bg-[#f7f2ec] w-[96vw] mx-auto">
+      <h1 className="text-center text-2xl md:text-3xl font-bold text-gray-600 mb-10">
+        Choose a Favourite Colour
+      </h1>
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 md:gap-10 lg:gap-12">
+        {[
+          'red',
+          'purple',
+          'pink',
+          'peach',
+          'warm',
+          'pastel',
+          'orange',
+          'blue',
+          'white',
+          'yellow',
+          'cool',
+          'mix',
+        ].map((color, index) => (
+          <div
+            key={index}
+            className="flex flex-col items-center justify-center cursor-pointer"
+          >
+            <div
+              className={`rounded-full ${colorClasses[color]} bg-cover h-[70px] w-[70px] md:h-[90px] md:w-[90px] lg:h-[110px] lg:w-[110px]`}
+            />
+            <h5 className="mt-3 text-sm md:text-base text-[#474545]">
+              {capitalizeFirstLetter(color)}
+            </h5>
           </div>
         ))}
       </div>
@@ -31,7 +54,7 @@ const FavouriteColor = () => {
   );
 };
 
-// Utility function to capitalize the first letter of the color name
+// Utility function
 const capitalizeFirstLetter = (string) => {
   return string.charAt(0).toUpperCase() + string.slice(1);
 };

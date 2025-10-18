@@ -35,7 +35,7 @@ const SideCrousel = ({ onSelectImage, selectedImage }) => {
     }, [onSelectImage]);
 
     return (
-        <div className="vertical-slide Customer sticky top-0">
+        <div className="vertical-slides Customer sticky top-0">
             <Splide
                 ref={splideRef}
                 options={{

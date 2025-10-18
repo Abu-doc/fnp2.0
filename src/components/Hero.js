@@ -9,16 +9,16 @@ import diwali from './images/diwaliii.jpg'
 
 const Hero = () => {
   return (
-    <div className=" h-72 mr-16"> {/* Adjust height using Tailwind */}
+    <div className="h-72 mr-16 hidden lg:block"> {/* hidden on <1024px */}
       <Splide
         options={{
-          type       : 'fade',   // Use fade transition
-          pagination : false,    // Hide pagination dots
-          arrows     : true,     // Show navigation arrows
-          autoplay   : true,     // Enable autoplay
-          interval   : 3000,     // Time between slides in milliseconds
-          pauseOnHover: true,    // Pause on hover
-          speed      : 600,      // Transition speed in milliseconds
+          type       : 'fade',   
+          pagination : false,    
+          arrows     : true,     
+          autoplay   : true,     
+          interval   : 3000,    
+          pauseOnHover: true,   
+          speed      : 600,      
           rewind     : true,
         }}
       >

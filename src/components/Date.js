@@ -7,16 +7,16 @@ import { TbCalendarTime } from "react-icons/tb";
 // Custom Input Component
 const CustomInput = ({ value, onClick }) => (
     <div
-        className="relative border rounded px-2 py-1 w-128 flex items-center lg-xl:w-96 md-lg:w-80"
+        className="relative border rounded px-2 py-1 flex items-center w-full max-w-xl"
         onClick={onClick}
     >   
-        <TbCalendarTime className="text-gray-500 mr-1" />
+        <TbCalendarTime className="text-gray-500 mr-2" />
         <input
             type="text"
             value={value}
             readOnly
             placeholder="Select Delivery Date & Time Slot"
-            className="w-128 border-none outline-none lg-xl:w-96 md-lg:w-60"
+            className="flex-1 border-none outline-none"
         />
         <MdNavigateNext className="absolute right-2 text-gray-500" />
     </div>
@@ -30,10 +30,12 @@ const DateComponent = () => {
     };
 
     return (
-        <div>
-            <h1 className="font-semibold text-left text-lg mt-3">Select Delivery Date & Time Slot</h1>
+        <div className="px-4">
+            <h1 className="font-semibold text-left text-lg mt-3">
+                Select Delivery Date & Time Slot
+            </h1>
 
-            <div className="mt-3 w-128 rounded-lg border lg-xl:w-96 md-lg:w-80">
+            <div className="mt-3 w-full max-w-xl rounded-lg border">
                 <DatePicker
                     selected={selectedDate}
                     onChange={handleDateChange}
@@ -46,4 +48,3 @@ const DateComponent = () => {
 };
 
 export default DateComponent;
-
