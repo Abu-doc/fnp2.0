@@ -25,7 +25,7 @@ function Final() {
   };
 
   useEffect(() => {
-    fetch(`https://fnp-backend.onrender.com/products/${id}`)``
+    fetch(`https://fnp-backend.onrender.com/products/${id}`)
       .then((res) => res.json())
       .then((data) => setProduct(data))
       .catch((err) => console.log("Error fetching product:", err));
